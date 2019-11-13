@@ -1,0 +1,6 @@
+cd nyzoVerifier
+git fetch --all
+git reset --hard origin/master
+git pull origin master
+./gradlew build
+sudo supervisorctl reload
