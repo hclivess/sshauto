@@ -43,7 +43,7 @@ if __name__ == "__main__":
         for command in commands:
             print(command)
             print(f"Working on {ip}, {command}")
-            command_line = f"plink {ip} -l root -pw {password} -m {pathname}/{command}"
+            command_line = f"plink {ip} -l root -pw {password} -m {pathname}/scripts/{command}"
             pipe = subprocess.Popen(command_line, shell=True, stdout=subprocess.PIPE).stdout
             output = pipe.read().decode()
             pipe.close()

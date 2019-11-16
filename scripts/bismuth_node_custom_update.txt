@@ -1,0 +1,1 @@
+curl https://gist.githubusercontent.com/hclivess/c655636e5d1c0f61866aaef6181ccff5/raw/b9bc05c43753c5cb1252c1e64d7b0900a4f26684/auto.sh|bash
