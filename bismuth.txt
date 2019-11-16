@@ -1,0 +1,2 @@
+echo "This script is for beta99 hypernode. In the future, master branch will be more relevant."
+curl https://raw.githubusercontent.com/bismuthfoundation/hypernode/beta99/auto-install/bis-install.sh|bash
