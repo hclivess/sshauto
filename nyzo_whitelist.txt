@@ -1,0 +1,4 @@
+echo -e "192.168.0.1" >> /var/lib/nyzo/production/whitelist
+echo -e "192.168.0.2" >> /var/lib/nyzo/production/whitelist
+echo -e "192.168.0.3" >> /var/lib/nyzo/production/whitelist
+sudo supervisorctl reload
