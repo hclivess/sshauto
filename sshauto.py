@@ -3,6 +3,8 @@ import os
 import subprocess
 import json
 import platform
+from getpass import getpass
+
 
 
 pathname = os.path.abspath(os.path.dirname(sys.argv[0]))
@@ -24,6 +26,9 @@ if __name__ == "__main__":
 
         user = entry["username"]
         password = entry["password"]
+        if password == "ask":
+            password = getpass("Enter your password: ")
+
         ip = entry["ip"]
         commands = entry["commands"]
 
