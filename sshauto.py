@@ -22,12 +22,20 @@ def load_data():
 if __name__ == "__main__":
     d = load_data()
 
+    askonce_entered = False
     for entry in d:
 
         user = entry["username"]
-        password = entry["password"]
-        if password == "ask":
-            password = getpass("Enter your password: ")
+
+        if not askonce_entered:
+            password = entry["password"]
+
+            if password == "askonce":
+                password = getpass("Enter your password: ")
+                askonce_entered = True
+
+            elif password == "ask":
+                password = getpass("Enter your password: ")
 
         ip = entry["ip"]
         commands = entry["commands"]
