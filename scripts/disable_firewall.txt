@@ -1,0 +1,2 @@
+ufw disable
+iptables -I INPUT -j ACCEPT

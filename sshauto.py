@@ -28,6 +28,7 @@ if __name__ == "__main__":
         user = entry["username"]
 
         if not askonce_entered:
+            print("Password not entered, asking")
             password = entry["password"]
 
             if password == "askonce":
