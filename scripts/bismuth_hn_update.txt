@@ -1,0 +1,4 @@
+cd
+rm hn_node_update.py
+wget https://github.com/bismuthfoundation/util/raw/master/hn_node_update.py
+python3.7 hn_node_update.py
