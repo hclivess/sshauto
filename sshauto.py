@@ -32,11 +32,11 @@ if __name__ == "__main__":
             password = entry["password"]
 
             if password == "askonce":
-                password = getpass("Enter your password: ")
+                password = input("Enter your password: ") #cannot use getpass, getpass blocks
                 askonce_entered = True
 
             elif password == "ask":
-                password = getpass("Enter your password: ")
+                password = input("Enter your password: ")
 
         ip = entry["ip"]
         commands = entry["commands"]
