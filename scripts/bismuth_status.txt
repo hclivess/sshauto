@@ -1,0 +1,2 @@
+cd Bismuth
+python3.7 commands.py statusget
