@@ -1,0 +1,2 @@
+cd Bismuth
+python3.7 commands.py balanceget "7032b0c097224f10464d483354389e18b0cba3f559ac6cf68e42af29"

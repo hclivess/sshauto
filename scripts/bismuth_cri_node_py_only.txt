@@ -1,0 +1,4 @@
+cd Bismuth
+rm node.py
+wget https://raw.githubusercontent.com/bismuthfoundation/Bismuth/master/node.py
+screen -X -S node quit
