@@ -1,0 +1,8 @@
+cd
+rm master.zip
+rm -rd Bismuth-master
+wget https://github.com/bismuthfoundation/Bismuth/archive/master.zip
+unzip master.zip
+rm Bismuth-master/config.txt
+cp -a ./Bismuth-master/. ./Bismuth/
+cd Bismuth;python3.7 commands.py stop
