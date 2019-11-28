@@ -1,0 +1,4 @@
+screen -X -S hypernode quit
+cd hypernode
+cd main
+rm data -rf
