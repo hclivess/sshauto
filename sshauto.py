@@ -2,6 +2,8 @@ import subprocess
 import json
 import argparse
 from getpass import getpass as gp
+import logging
+from logging.handlers import RotatingFileHandler
 
 def load_data(file="demo.json"):
 
@@ -12,11 +14,17 @@ def load_data(file="demo.json"):
 
 
 if __name__ == "__main__":
+    password = None
     parser = argparse.ArgumentParser()
 
     parser.add_argument("--conf", help="Server configuration file")
     args = parser.parse_args()
     print(f"Selected configuration file: {args.conf}")
+
+    logger = logging.getLogger('my_logger')
+    handler = RotatingFileHandler(f'{args.conf}', maxBytes=2000, backupCount=10)
+    logger.addHandler(handler)
+
     d = load_data(args.conf)
 
     askonce_entered = False
@@ -25,13 +33,11 @@ if __name__ == "__main__":
         user = entry["username"]
 
         if not askonce_entered:
-            print("Password not entered, asking")
+
             password = entry["password"]
 
             if password == "askonce":
-                password = input(
-                    "Enter your password: "
-                )  # cannot use getpass, getpass blocks
+                password = gp("Enter your password: ")
                 askonce_entered = True
 
             elif password == "ask":
@@ -49,4 +55,4 @@ if __name__ == "__main__":
             ).stdout
             output = pipe.read().decode()
             pipe.close()
-            print(output)
+            logger.warning(output)
