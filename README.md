@@ -7,7 +7,7 @@ Create your configuration file from the `demo.json` template and adjust settings
 
 If you don't want to store plaintext passwords, enter `"ask"` as your password to be asked during the procedure. If you want to use one password for all servers, enter `"askonce"` instead. The script sorts servers from top to bottom, so you can organize around `"askonce"` and still have passwords and `"ask"` trigger ahead of it. 
 
-For linux, you need to `apt-get install plink`. For windows, you need the bundled `plink.exe`
+For linux, you need to `apt-get install plink`. For Windows, you need the bundled `plink.exe`
 
 **This is what a demo config file looks like:**
 
@@ -39,7 +39,7 @@ For linux, you need to `apt-get install plink`. For windows, you need the bundle
   }
 ]
 ```
-Supports unlimited number of servers and unlimited number of command files per server.
+Supports unlimited number of servers and unlimited number of script files per server. Of course, you may have as many configurations as you want since execution happens through arguments.
 
 
 **The script file is simply a set of commands you would normally enter in terminal:**
@@ -53,7 +53,7 @@ git pull origin master
 sudo supervisorctl reload
 ```
 
-You need to supply your configuration file as an argument, here's the demo example:
+To run, you need to supply your configuration file as an argument to the script, here's the demo example:
 ```
 python3.7 sshauto.py --conf configs/demo.json
 ```
