@@ -7,8 +7,6 @@ Create your configuration file from the `demo.json` template and adjust settings
 
 If you don't want to store plaintext passwords, enter `"ask"` as your password to be asked during the procedure. If you want to use one password for all servers, enter `"askonce"` instead. The script sorts servers from top to bottom, so you can organize around `"askonce"` and still have passwords and `"ask"` trigger ahead of it. 
 
-**Beware**: sshauto currently does not use `getpass` as it stalls the operation. A simple `input()` is used.
-
 For linux, you need to `apt-get install plink`. For windows, you need the bundled `plink.exe`
 
 **This is what a demo config file looks like:**
