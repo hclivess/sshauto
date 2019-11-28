@@ -38,7 +38,7 @@ if __name__ == "__main__":
                 password = gp("Enter your password: ")
 
         ip = entry["ip"]
-        commands = entry["commands"]
+        commands = entry["scripts"]
 
         for command in commands:
             print(command)

@@ -17,25 +17,25 @@ For linux, you need to `apt-get install plink`. For windows, you need the bundle
     "ip": "192.168.0.1",
     "username": "root",
     "password": "admin",
-    "commands": ["scripts/nyzo_update.txt"]
+    "scripts": ["scripts/nyzo_update.txt"]
   },
   {
     "ip": "192.168.0.2",
     "username": "root",
     "password": "ask",
-    "commands": ["scripts/nyzo_update.txt"]
+    "scripts": ["scripts/nyzo_update.txt"]
   },
   {
     "ip": "192.168.0.3",
     "username": "root",
     "password": "askonce",
-    "commands": ["scripts/nyzo_update.txt", "bismuth_balance.txt"]
+    "scripts": ["scripts/nyzo_update.txt", "bismuth_balance.txt"]
   },
   {
     "ip": "192.168.0.4",
     "username": "root",
     "password": "",
-    "commands": ["scripts/nyzo_update.txt"]
+    "scripts": ["scripts/nyzo_update.txt"]
   }
 ]
 ```
