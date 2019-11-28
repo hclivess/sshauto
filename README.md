@@ -57,3 +57,7 @@ You need to supply your configuration file as an argument, here's the demo examp
 ```
 python3.7 sshauto.py --conf configs/demo.json
 ```
+
+**Visualisation**
+
+![alt text](thumb.png)
