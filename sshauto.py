@@ -57,7 +57,7 @@ if __name__ == "__main__":
             try:
                 rootLogger.info(command)
                 rootLogger.info(f"Working on {ip}, {command}")
-                command_line = f"plink {ip} -l root -pw {password} -m {command} -batch"
+                command_line = f"plink {ip} -l {user} -pw {password} -m {command} -batch"
                 pipe = subprocess.Popen(
                     command_line, shell=True, stdout=subprocess.PIPE
                 ).stdout
